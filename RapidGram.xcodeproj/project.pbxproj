@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		814FA65118F33BA500F06DE7 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 814FA65018F33BA500F06DE7 /* Storyboard.storyboard */; };
+		814FA65418F3407000F06DE7 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814FA65318F3407000F06DE7 /* RootViewController.m */; };
+		814FA65718F342A700F06DE7 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814FA65618F342A700F06DE7 /* ProfileViewController.m */; };
+		814FA65D18F3449100F06DE7 /* ExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814FA65C18F3449100F06DE7 /* ExploreViewController.m */; };
+		814FA66118F3490400F06DE7 /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814FA66018F3490400F06DE7 /* ActivityViewController.m */; };
+		814FA66418F34A7B00F06DE7 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814FA66318F34A7B00F06DE7 /* CameraViewController.m */; };
 		81B1A0FD18F32BB40053F5EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B1A0FC18F32BB40053F5EF /* Foundation.framework */; };
 		81B1A0FF18F32BB40053F5EF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B1A0FE18F32BB40053F5EF /* CoreGraphics.framework */; };
 		81B1A10118F32BB40053F5EF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B1A10018F32BB40053F5EF /* UIKit.framework */; };
@@ -35,6 +41,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		814FA65018F33BA500F06DE7 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		814FA65218F3407000F06DE7 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = RapidGram/RootViewController.h; sourceTree = "<group>"; };
+		814FA65318F3407000F06DE7 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = RapidGram/RootViewController.m; sourceTree = "<group>"; };
+		814FA65518F342A700F06DE7 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = RapidGram/ProfileViewController.h; sourceTree = "<group>"; };
+		814FA65618F342A700F06DE7 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = RapidGram/ProfileViewController.m; sourceTree = "<group>"; };
+		814FA65B18F3449100F06DE7 /* ExploreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExploreViewController.h; sourceTree = "<group>"; };
+		814FA65C18F3449100F06DE7 /* ExploreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExploreViewController.m; sourceTree = "<group>"; };
+		814FA65F18F3490400F06DE7 /* ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivityViewController.h; path = RapidGram/ActivityViewController.h; sourceTree = "<group>"; };
+		814FA66018F3490400F06DE7 /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityViewController.m; path = RapidGram/ActivityViewController.m; sourceTree = "<group>"; };
+		814FA66218F34A7B00F06DE7 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraViewController.h; path = RapidGram/CameraViewController.h; sourceTree = "<group>"; };
+		814FA66318F34A7B00F06DE7 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraViewController.m; path = RapidGram/CameraViewController.m; sourceTree = "<group>"; };
 		81B1A0F918F32BB40053F5EF /* RapidGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RapidGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81B1A0FC18F32BB40053F5EF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		81B1A0FE18F32BB40053F5EF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -81,9 +98,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		814FA65E18F344A600F06DE7 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				814FA65218F3407000F06DE7 /* RootViewController.h */,
+				814FA65318F3407000F06DE7 /* RootViewController.m */,
+				814FA65B18F3449100F06DE7 /* ExploreViewController.h */,
+				814FA65C18F3449100F06DE7 /* ExploreViewController.m */,
+				814FA66218F34A7B00F06DE7 /* CameraViewController.h */,
+				814FA66318F34A7B00F06DE7 /* CameraViewController.m */,
+				814FA65F18F3490400F06DE7 /* ActivityViewController.h */,
+				814FA66018F3490400F06DE7 /* ActivityViewController.m */,
+				814FA65518F342A700F06DE7 /* ProfileViewController.h */,
+				814FA65618F342A700F06DE7 /* ProfileViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		81B1A0F018F32BB40053F5EF = {
 			isa = PBXGroup;
 			children = (
+				814FA65E18F344A600F06DE7 /* View Controllers */,
 				81B1A10418F32BB40053F5EF /* RapidGram */,
 				81B1A12118F32BB40053F5EF /* RapidGramTests */,
 				81B1A0FB18F32BB40053F5EF /* Frameworks */,
@@ -119,6 +154,7 @@
 				81B1A10E18F32BB40053F5EF /* AppDelegate.m */,
 				81B1A11318F32BB40053F5EF /* Images.xcassets */,
 				81B1A11018F32BB40053F5EF /* RapidGram.xcdatamodeld */,
+				814FA65018F33BA500F06DE7 /* Storyboard.storyboard */,
 				81B1A10518F32BB40053F5EF /* Supporting Files */,
 			);
 			path = RapidGram;
@@ -230,6 +266,7 @@
 			files = (
 				81B1A10918F32BB40053F5EF /* InfoPlist.strings in Resources */,
 				81B1A11418F32BB40053F5EF /* Images.xcassets in Resources */,
+				814FA65118F33BA500F06DE7 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,8 +286,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				81B1A10F18F32BB40053F5EF /* AppDelegate.m in Sources */,
+				814FA66418F34A7B00F06DE7 /* CameraViewController.m in Sources */,
 				81B1A11218F32BB40053F5EF /* RapidGram.xcdatamodeld in Sources */,
+				814FA65418F3407000F06DE7 /* RootViewController.m in Sources */,
 				81B1A10B18F32BB40053F5EF /* main.m in Sources */,
+				814FA65D18F3449100F06DE7 /* ExploreViewController.m in Sources */,
+				814FA66118F3490400F06DE7 /* ActivityViewController.m in Sources */,
+				814FA65718F342A700F06DE7 /* ProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +489,7 @@
 				81B1A12D18F32BB50053F5EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		81B1A12E18F32BB50053F5EF /* Build configuration list for PBXNativeTarget "RapidGramTests" */ = {
 			isa = XCConfigurationList;
@@ -455,6 +498,7 @@
 				81B1A13018F32BB50053F5EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
