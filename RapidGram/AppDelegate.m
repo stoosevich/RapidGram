@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "RootViewController.h"
+#import <Parse/Parse.h>
 
 @implementation AppDelegate
 
@@ -17,9 +18,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    UITabBarController* tabBarController = (UITabBarController*) self.window.rootViewController;
-    RootViewController* rootViewController = tabBarController.viewControllers.firstObject;
-    rootViewController.managedObjectContext = self.managedObjectContext;    return YES;
+    [Parse setApplicationId:@"zeKm0cQdUDiJLOWzL3h0qqE3ERfpB3nP1MOEJVkq"
+                  clientKey:@"HH1mWpllMb5e4hLISy8rjtPl2lre3eM6HjDJpw5F"];
+    
+//    UITabBarController* tabBarController = (UITabBarController*) self.window.rootViewController;
+//    RootViewController* rootViewController = tabBarController.viewControllers.firstObject;
+//    rootViewController.managedObjectContext = self.managedObjectContext;
+    return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

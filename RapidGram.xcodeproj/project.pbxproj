@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		814FA65118F33BA500F06DE7 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 814FA65018F33BA500F06DE7 /* Storyboard.storyboard */; };
-		814FA65418F3407000F06DE7 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814FA65318F3407000F06DE7 /* RootViewController.m */; };
 		814FA65718F342A700F06DE7 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814FA65618F342A700F06DE7 /* ProfileViewController.m */; };
 		814FA65D18F3449100F06DE7 /* ExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814FA65C18F3449100F06DE7 /* ExploreViewController.m */; };
 		814FA66118F3490400F06DE7 /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814FA66018F3490400F06DE7 /* ActivityViewController.m */; };
 		814FA66418F34A7B00F06DE7 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814FA66318F34A7B00F06DE7 /* CameraViewController.m */; };
+		814FA6AE18F4650800F06DE7 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814FA6AD18F4650800F06DE7 /* HomeViewController.m */; };
+		814FA6B418F4867500F06DE7 /* MyTableViewCel.m in Sources */ = {isa = PBXBuildFile; fileRef = 814FA6B318F4867500F06DE7 /* MyTableViewCel.m */; };
 		81B1A0FD18F32BB40053F5EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B1A0FC18F32BB40053F5EF /* Foundation.framework */; };
 		81B1A0FF18F32BB40053F5EF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B1A0FE18F32BB40053F5EF /* CoreGraphics.framework */; };
 		81B1A10118F32BB40053F5EF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B1A10018F32BB40053F5EF /* UIKit.framework */; };
@@ -28,6 +29,7 @@
 		81B1A11E18F32BB40053F5EF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B1A10218F32BB40053F5EF /* CoreData.framework */; };
 		81B1A12618F32BB40053F5EF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81B1A12418F32BB40053F5EF /* InfoPlist.strings */; };
 		81B1A12818F32BB40053F5EF /* RapidGramTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B1A12718F32BB40053F5EF /* RapidGramTests.m */; };
+		DAB1A802DBFF4E629DDA633D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C853011A58B04EF69A2363BE /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,9 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		814FA65018F33BA500F06DE7 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
-		814FA65218F3407000F06DE7 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = RapidGram/RootViewController.h; sourceTree = "<group>"; };
-		814FA65318F3407000F06DE7 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = RapidGram/RootViewController.m; sourceTree = "<group>"; };
+		814FA65018F33BA500F06DE7 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = RapidGram/Storyboard.storyboard; sourceTree = "<group>"; };
 		814FA65518F342A700F06DE7 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = RapidGram/ProfileViewController.h; sourceTree = "<group>"; };
 		814FA65618F342A700F06DE7 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = RapidGram/ProfileViewController.m; sourceTree = "<group>"; };
 		814FA65B18F3449100F06DE7 /* ExploreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExploreViewController.h; sourceTree = "<group>"; };
@@ -52,6 +52,10 @@
 		814FA66018F3490400F06DE7 /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityViewController.m; path = RapidGram/ActivityViewController.m; sourceTree = "<group>"; };
 		814FA66218F34A7B00F06DE7 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraViewController.h; path = RapidGram/CameraViewController.h; sourceTree = "<group>"; };
 		814FA66318F34A7B00F06DE7 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraViewController.m; path = RapidGram/CameraViewController.m; sourceTree = "<group>"; };
+		814FA6AC18F4650800F06DE7 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		814FA6AD18F4650800F06DE7 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		814FA6B218F4867500F06DE7 /* MyTableViewCel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewCel.h; sourceTree = "<group>"; };
+		814FA6B318F4867500F06DE7 /* MyTableViewCel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCel.m; sourceTree = "<group>"; };
 		81B1A0F918F32BB40053F5EF /* RapidGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RapidGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81B1A0FC18F32BB40053F5EF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		81B1A0FE18F32BB40053F5EF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -70,6 +74,8 @@
 		81B1A12318F32BB40053F5EF /* RapidGramTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RapidGramTests-Info.plist"; sourceTree = "<group>"; };
 		81B1A12518F32BB40053F5EF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		81B1A12718F32BB40053F5EF /* RapidGramTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RapidGramTests.m; sourceTree = "<group>"; };
+		C3C57F78D8BC47D2A39724B4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		C853011A58B04EF69A2363BE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,7 @@
 				81B1A10318F32BB40053F5EF /* CoreData.framework in Frameworks */,
 				81B1A10118F32BB40053F5EF /* UIKit.framework in Frameworks */,
 				81B1A0FD18F32BB40053F5EF /* Foundation.framework in Frameworks */,
+				DAB1A802DBFF4E629DDA633D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,8 +108,8 @@
 		814FA65E18F344A600F06DE7 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				814FA65218F3407000F06DE7 /* RootViewController.h */,
-				814FA65318F3407000F06DE7 /* RootViewController.m */,
+				814FA6AC18F4650800F06DE7 /* HomeViewController.h */,
+				814FA6AD18F4650800F06DE7 /* HomeViewController.m */,
 				814FA65B18F3449100F06DE7 /* ExploreViewController.h */,
 				814FA65C18F3449100F06DE7 /* ExploreViewController.m */,
 				814FA66218F34A7B00F06DE7 /* CameraViewController.h */,
@@ -118,11 +125,13 @@
 		81B1A0F018F32BB40053F5EF = {
 			isa = PBXGroup;
 			children = (
+				814FA65018F33BA500F06DE7 /* Storyboard.storyboard */,
 				814FA65E18F344A600F06DE7 /* View Controllers */,
 				81B1A10418F32BB40053F5EF /* RapidGram */,
 				81B1A12118F32BB40053F5EF /* RapidGramTests */,
 				81B1A0FB18F32BB40053F5EF /* Frameworks */,
 				81B1A0FA18F32BB40053F5EF /* Products */,
+				C3C57F78D8BC47D2A39724B4 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +152,7 @@
 				81B1A10018F32BB40053F5EF /* UIKit.framework */,
 				81B1A10218F32BB40053F5EF /* CoreData.framework */,
 				81B1A11A18F32BB40053F5EF /* XCTest.framework */,
+				C853011A58B04EF69A2363BE /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -150,11 +160,12 @@
 		81B1A10418F32BB40053F5EF /* RapidGram */ = {
 			isa = PBXGroup;
 			children = (
+				814FA6B218F4867500F06DE7 /* MyTableViewCel.h */,
+				814FA6B318F4867500F06DE7 /* MyTableViewCel.m */,
 				81B1A10D18F32BB40053F5EF /* AppDelegate.h */,
 				81B1A10E18F32BB40053F5EF /* AppDelegate.m */,
 				81B1A11318F32BB40053F5EF /* Images.xcassets */,
 				81B1A11018F32BB40053F5EF /* RapidGram.xcdatamodeld */,
-				814FA65018F33BA500F06DE7 /* Storyboard.storyboard */,
 				81B1A10518F32BB40053F5EF /* Supporting Files */,
 			);
 			path = RapidGram;
@@ -196,9 +207,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81B1A12B18F32BB50053F5EF /* Build configuration list for PBXNativeTarget "RapidGram" */;
 			buildPhases = (
+				A161E66B4F8F4BCA8A6FC99C /* Check Pods Manifest.lock */,
 				81B1A0F518F32BB40053F5EF /* Sources */,
 				81B1A0F618F32BB40053F5EF /* Frameworks */,
 				81B1A0F718F32BB40053F5EF /* Resources */,
+				76BD926E270C439BBA24628A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -280,19 +293,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		76BD926E270C439BBA24628A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A161E66B4F8F4BCA8A6FC99C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		81B1A0F518F32BB40053F5EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				814FA6B418F4867500F06DE7 /* MyTableViewCel.m in Sources */,
 				81B1A10F18F32BB40053F5EF /* AppDelegate.m in Sources */,
 				814FA66418F34A7B00F06DE7 /* CameraViewController.m in Sources */,
 				81B1A11218F32BB40053F5EF /* RapidGram.xcdatamodeld in Sources */,
-				814FA65418F3407000F06DE7 /* RootViewController.m in Sources */,
 				81B1A10B18F32BB40053F5EF /* main.m in Sources */,
 				814FA65D18F3449100F06DE7 /* ExploreViewController.m in Sources */,
 				814FA66118F3490400F06DE7 /* ActivityViewController.m in Sources */,
 				814FA65718F342A700F06DE7 /* ProfileViewController.m in Sources */,
+				814FA6AE18F4650800F06DE7 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +453,7 @@
 		};
 		81B1A12C18F32BB50053F5EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3C57F78D8BC47D2A39724B4 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -419,6 +467,7 @@
 		};
 		81B1A12D18F32BB50053F5EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3C57F78D8BC47D2A39724B4 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
