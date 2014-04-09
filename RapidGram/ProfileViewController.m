@@ -32,13 +32,16 @@
 {
     [super viewDidLoad];
     PFQuery* query = [PFQuery queryWithClassName:@"Kitten"];
-    [query whereKey:@"User" equalTo:[[PFUser currentUser] objectId]];
-    self.profilePhotos = [NSArray new];
+    [query whereKey:@"user" equalTo:[PFUser currentUser]];
+    //self.profilePhotos = [NSArray new];
+    self.profilePhotos = [query findObjects];
+
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
     dispatch_async(queue, ^{
-        self.profilePhotos = [query findObjects];
-    });
+       // NSLog(@"%lu", (unsigned long)self.profilePhotos.count);
+        [self.myCollectionView reloadData];
 
+    });
     // Do any additional setup after loading the view.
 }
 
@@ -49,14 +52,15 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 0;
+    return 3;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     ProfileCollectionCell* cell = (ProfileCollectionCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"ProfileCellReuseID" forIndexPath:indexPath];
-    
-    return nil;
+    cell.photo.backgroundColor = [UIColor whiteColor];
+    cell.backgroundColor = [UIColor whiteColor];
+    return cell;
 }
 
 /*
