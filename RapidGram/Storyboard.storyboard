@@ -179,22 +179,41 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AwL-gg-YYW">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="319" height="320"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="YL0-gd-4Rh">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OtherProfilePhotosReuseCellID" id="YL0-gd-4Rh" customClass="ProfileCollectionCell">
+                                        <rect key="frame" x="1" y="0.0" width="319" height="320"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="319" height="320"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9lx-mR-zWv">
+                                                    <rect key="frame" x="0.0" y="0.0" width="319" height="320"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </imageView>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="9lx-mR-zWv" firstAttribute="leading" secondItem="YL0-gd-4Rh" secondAttribute="leading" id="0xm-h5-CpA"/>
+                                            <constraint firstAttribute="bottom" secondItem="9lx-mR-zWv" secondAttribute="bottom" id="VBc-21-hFo"/>
+                                            <constraint firstAttribute="trailing" secondItem="9lx-mR-zWv" secondAttribute="trailing" id="VcO-X2-8FE"/>
+                                            <constraint firstItem="9lx-mR-zWv" firstAttribute="top" secondItem="YL0-gd-4Rh" secondAttribute="top" id="lsv-hG-qv5"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="photo" destination="9lx-mR-zWv" id="xt9-lm-W0s"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="HoP-jC-Vb8" id="cWy-Z1-AO6"/>
+                                    <outlet property="delegate" destination="HoP-jC-Vb8" id="RaO-nO-SDL"/>
+                                </connections>
                             </collectionView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e4y-3K-sjY">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -216,6 +235,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Explore" id="GGy-9b-yO4"/>
+                    <connections>
+                        <outlet property="myCollectionFlowLayout" destination="AwL-gg-YYW" id="KdQ-Mc-Nr4"/>
+                        <outlet property="myCollectionView" destination="8Ft-e0-9ER" id="yxb-EK-yqB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BnR-5u-M0B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -304,6 +327,9 @@
                                     <tabBarItem title="Tags" id="99c-S1-gAH"/>
                                 </items>
                                 <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="RWE-t9-FxG" id="TH4-1p-mQE"/>
+                                </connections>
                             </tabBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YFh-S5-wbk">
                                 <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
@@ -358,7 +384,14 @@
                     <tabBarItem key="tabBarItem" title="Profile" id="g55-nJ-CQs"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="mapTabItem" destination="zdR-DJ-X8R" id="zAN-J7-6HY"/>
+                        <outlet property="myCollectionFlowLayout" destination="AjP-ob-xjR" id="vmv-pL-8Ys"/>
                         <outlet property="myCollectionView" destination="iee-ZY-6GE" id="Qsr-g3-xt9"/>
+                        <outlet property="myPicTabItem" destination="TzM-Qj-sQ7" id="SWJ-q5-Cbb"/>
+                        <outlet property="profileImageView" destination="YFh-S5-wbk" id="hXd-QD-RaW"/>
+                        <outlet property="profileTabBar" destination="ukh-1W-fHL" id="qFc-1K-W8O"/>
+                        <outlet property="tagsTabItem" destination="99c-S1-gAH" id="JPQ-GD-NX9"/>
+                        <outlet property="thumbNailTabItem" destination="Slf-fN-a6i" id="17x-OD-amw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fvR-U5-my7" userLabel="First Responder" sceneMemberID="firstResponder"/>

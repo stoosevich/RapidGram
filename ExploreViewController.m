@@ -7,43 +7,51 @@
 //
 
 #import "ExploreViewController.h"
+#import "Parse/Parse.h"
+#import "ProfileCollectionCell.h"
 
-@interface ExploreViewController ()
+@interface ExploreViewController () <UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource>
+@property (weak, nonatomic) IBOutlet UICollectionView *myCollectionView;
+@property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *myCollectionFlowLayout;
+@property NSArray* otherProfilesPhotos;
 
 @end
 
 @implementation ExploreViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    PFQuery* query = [PFQuery queryWithClassName:@"Kitten"];
+    [query whereKey:@"user" notEqualTo:[PFUser currentUser]];
+    [query orderByDescending:@"createdAt"];
+    self.myCollectionFlowLayout.itemSize = CGSizeMake(99, 99);
+    dispatch_queue_t queue = dispatch_get_main_queue();
+    dispatch_async(queue, ^{
+        self.otherProfilesPhotos = [query findObjects];
+        NSLog(@"%d", self.otherProfilesPhotos.count);
+        NSLog(@"%@", [self.otherProfilesPhotos.firstObject class]);
+        [self.myCollectionView reloadData];
+       
+    });
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return self.otherProfilesPhotos.count;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    ProfileCollectionCell* cell = (ProfileCollectionCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"OtherProfilePhotosReuseCellID" forIndexPath:indexPath];
+    if (self.otherProfilesPhotos.count != 0) {
+        [[[self.otherProfilesPhotos objectAtIndex:indexPath.row] objectForKey:@"image"] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            if (!error) {
+                cell.photo.image = [UIImage imageWithData:data];
+            }
+        }];
+    }
+    return cell;
 }
-*/
 
 @end

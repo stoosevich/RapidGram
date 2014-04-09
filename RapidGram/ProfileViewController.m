@@ -11,22 +11,20 @@
 #import "Parse/Parse.h"
 
 
-@interface ProfileViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
+@interface ProfileViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UITabBarDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *myCollectionView;
 @property NSArray* profilePhotos;
+@property (weak, nonatomic) IBOutlet UITabBar *profileTabBar;
+@property (weak, nonatomic) IBOutlet UITabBarItem *thumbNailTabItem;
+@property (weak, nonatomic) IBOutlet UITabBarItem *myPicTabItem;
+@property (weak, nonatomic) IBOutlet UITabBarItem *mapTabItem;
+@property (weak, nonatomic) IBOutlet UITabBarItem *tagsTabItem;
+@property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *myCollectionFlowLayout;
+@property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
 
 @end
 
 @implementation ProfileViewController
-
-//- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-//{
-//    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-//    if (self) {
-//        // Custom initialization
-//    }
-//    return self;
-//}
 
 - (void)viewDidLoad
 {
@@ -34,23 +32,18 @@
     PFQuery* query = [PFQuery queryWithClassName:@"Kitten"];
     [query whereKey:@"user" equalTo:[PFUser currentUser]];
     [query orderByDescending:@"createdAt"];
-    //self.profilePhotos = [NSArray new];
+    self.myCollectionFlowLayout.itemSize = CGSizeMake(99, 99);
+    self.profileImageView.image = [UIImage imageNamed:@"profilePic.png"];
+
 
     dispatch_queue_t queue = dispatch_get_main_queue();
     dispatch_async(queue, ^{
-       // NSLog(@"%lu", (unsigned long)self.profilePhotos.count);
         self.profilePhotos = [query findObjects];
         [self.myCollectionView reloadData];
 
     });
-    // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return self.profilePhotos.count;
@@ -63,14 +56,25 @@
         [[[self.profilePhotos objectAtIndex:indexPath.row] objectForKey:@"image"] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
             if (!error) {
                 cell.photo.image = [UIImage imageWithData:data];
-                // image can now be set on a UIImageView
             }
         }];
     }
-    //cell.backgroundColor = [UIColor whiteColor];
     return cell;
 }
 
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
+    if (item == self.thumbNailTabItem) {
+        self.myCollectionFlowLayout.itemSize = CGSizeMake(99, 99);
+        [self.myCollectionView reloadData];
+
+    }
+    else if(item == self.myPicTabItem){
+        self.myCollectionFlowLayout.itemSize = CGSizeMake(319, 320);
+        [self.myCollectionView reloadData];
+
+
+    }
+}
 /*
 #pragma mark - Navigation
 
