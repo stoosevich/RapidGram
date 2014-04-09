@@ -12,5 +12,7 @@
 
 @property (strong, nonatomic) IBOutlet UITextField *myTextField;
 @property (strong, nonatomic) IBOutlet UIView *myView;
+@property (strong, nonatomic) IBOutlet PFImageView *myImageView;
+@property (strong, nonatomic) IBOutlet UILabel *hateNumber;
 
 @end
