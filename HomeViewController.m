@@ -36,11 +36,11 @@
    /// [testUser signUpInBackground];
 //    PFUser* wheatley = [PFUser currentUser];
 //    [wheatley saveInBackground];
-    catPics = [NSMutableArray new];
-    users = [NSMutableArray new];
-    catPicCount = 0;
+    //catPics = [NSMutableArray new];
+    //users = [NSMutableArray new];
+    //catPicCount = 0;
     [super viewDidLoad];
-    NSLog(@"%@",[[PFUser currentUser]username]);
+    //NSLog(@"%@",[[PFUser currentUser]username]);
     NSError* error = [NSError new];
     [self objectsDidLoad:*&error];
 //    [PFUser enableAutomaticUser];
@@ -49,7 +49,8 @@
 
 -(PFQuery *)queryForTable{
     PFQuery* query = [PFQuery queryWithClassName:@"Kitten"];
-    catPics = (NSMutableArray*)[query findObjects];
+    [query orderByDescending:@"createdAt"];
+    //catPics = (NSMutableArray*)[query findObjects];
 //    for (PFObject* object in catPics) {
 //        PFUser* temp = [object objectForKey:@"user"];
 //        [temp fetch];
@@ -76,7 +77,12 @@
 
 //    [cell.imageView addSubview:cell.myView];
     [cell.myImageView loadInBackground];
+    if ([object objectForKey:@"Hates"] == NULL) {
+        cell.hateNumber.text = @"0";
+    }
+    else{
     cell.hateNumber.text = [NSString stringWithFormat:@"%@", [object objectForKey:@"Hates"]];
+    }
     return cell;
 
 }

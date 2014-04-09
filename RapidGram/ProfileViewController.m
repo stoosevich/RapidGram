@@ -33,6 +33,7 @@
     [super viewDidLoad];
     PFQuery* query = [PFQuery queryWithClassName:@"Kitten"];
     [query whereKey:@"user" equalTo:[PFUser currentUser]];
+    [query orderByDescending:@"createdAt"];
     //self.profilePhotos = [NSArray new];
 
     dispatch_queue_t queue = dispatch_get_main_queue();
