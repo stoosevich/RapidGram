@@ -34,6 +34,7 @@
         picker.delegate = self;
         picker.allowsEditing = YES;
         picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
 //        picker.mediaTypes = 
         
         [self presentViewController:picker animated:YES completion:NULL];
