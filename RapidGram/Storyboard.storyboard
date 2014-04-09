@@ -288,6 +288,10 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="RWE-t9-FxG" id="Tqs-d8-UjG"/>
+                                    <outlet property="delegate" destination="RWE-t9-FxG" id="mgg-HQ-DhM"/>
+                                </connections>
                             </collectionView>
                             <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ukh-1W-fHL">
                                 <rect key="frame" x="0.0" y="120" width="320" height="49"/>
