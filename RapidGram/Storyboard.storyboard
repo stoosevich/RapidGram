@@ -257,20 +257,35 @@
                                 <rect key="frame" x="0.0" y="168" width="320" height="350"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AjP-ob-xjR">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="319" height="320"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ZbP-Xw-FY5">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProfileCellReuseID" id="ZbP-Xw-FY5" customClass="ProfileCollectionCell">
+                                        <rect key="frame" x="1" y="0.0" width="319" height="320"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="319" height="320"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NOX-1j-UdL">
+                                                    <rect key="frame" x="0.0" y="0.0" width="319" height="320"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </imageView>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="NOX-1j-UdL" secondAttribute="bottom" id="CXR-9w-Paq"/>
+                                            <constraint firstItem="NOX-1j-UdL" firstAttribute="top" secondItem="ZbP-Xw-FY5" secondAttribute="top" id="J38-El-fT1"/>
+                                            <constraint firstItem="NOX-1j-UdL" firstAttribute="leading" secondItem="ZbP-Xw-FY5" secondAttribute="leading" id="ZJq-w0-1MI"/>
+                                            <constraint firstAttribute="trailing" secondItem="NOX-1j-UdL" secondAttribute="trailing" id="cKL-CZ-vV6"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="photo" destination="NOX-1j-UdL" id="u6M-Lj-94y"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -338,10 +353,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="g55-nJ-CQs"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="myCollectionView" destination="iee-ZY-6GE" id="Qsr-g3-xt9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fvR-U5-my7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1136" y="1727"/>
+            <point key="canvasLocation" x="878" y="1766"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="TtP-RL-fXb">

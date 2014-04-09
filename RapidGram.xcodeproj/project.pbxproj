@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		561325B718F5DAF5001CB1A3 /* ProfileCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 561325B618F5DAF5001CB1A3 /* ProfileCollectionCell.m */; };
 		814FA65118F33BA500F06DE7 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 814FA65018F33BA500F06DE7 /* Storyboard.storyboard */; };
 		814FA65718F342A700F06DE7 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814FA65618F342A700F06DE7 /* ProfileViewController.m */; };
 		814FA65D18F3449100F06DE7 /* ExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814FA65C18F3449100F06DE7 /* ExploreViewController.m */; };
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		561325B518F5DAF5001CB1A3 /* ProfileCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileCollectionCell.h; sourceTree = "<group>"; };
+		561325B618F5DAF5001CB1A3 /* ProfileCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileCollectionCell.m; sourceTree = "<group>"; };
 		814FA65018F33BA500F06DE7 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = RapidGram/Storyboard.storyboard; sourceTree = "<group>"; };
 		814FA65518F342A700F06DE7 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = RapidGram/ProfileViewController.h; sourceTree = "<group>"; };
 		814FA65618F342A700F06DE7 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = RapidGram/ProfileViewController.m; sourceTree = "<group>"; };
@@ -118,6 +121,8 @@
 				814FA66018F3490400F06DE7 /* ActivityViewController.m */,
 				814FA65518F342A700F06DE7 /* ProfileViewController.h */,
 				814FA65618F342A700F06DE7 /* ProfileViewController.m */,
+				561325B518F5DAF5001CB1A3 /* ProfileCollectionCell.h */,
+				561325B618F5DAF5001CB1A3 /* ProfileCollectionCell.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -338,6 +343,7 @@
 				81B1A10B18F32BB40053F5EF /* main.m in Sources */,
 				814FA65D18F3449100F06DE7 /* ExploreViewController.m in Sources */,
 				814FA66118F3490400F06DE7 /* ActivityViewController.m in Sources */,
+				561325B718F5DAF5001CB1A3 /* ProfileCollectionCell.m in Sources */,
 				814FA65718F342A700F06DE7 /* ProfileViewController.m in Sources */,
 				814FA6AE18F4650800F06DE7 /* HomeViewController.m in Sources */,
 			);

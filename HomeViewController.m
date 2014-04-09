@@ -30,10 +30,10 @@
 //    self.parseClassName = @"Kitten";
 //    [PFUser logOut];
    // PFUser* testUser = [PFUser new];
-//    [PFUser logInWithUsernameInBackground:@"wheatley" password:@"thecakeisalie"];
-//    [testUser setUsername:@"wheatley"];
-//    [testUser setPassword:@"thecakeisalie"];
-//    [testUser signUpInBackground];
+ //   [PFUser logInWithUsernameInBackground:@"wheatley" password:@"thecakeisalie"];
+  //  [testUser setUsername:@"Joel"];
+   // [testUser setPassword:@"ellie"];
+   /// [testUser signUpInBackground];
 //    PFUser* wheatley = [PFUser currentUser];
 //    [wheatley saveInBackground];
     catPics = [NSMutableArray new];
