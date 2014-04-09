@@ -372,9 +372,9 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9eN-91-15k" kind="modal" id="zVX-R2-57c"/>
                         <segue destination="KUq-mT-8kB" kind="relationship" relationship="viewControllers" id="1yu-rs-5YM"/>
                         <segue destination="HoP-jC-Vb8" kind="relationship" relationship="viewControllers" id="jjt-AZ-G50"/>
+                        <segue destination="9eN-91-15k" kind="relationship" relationship="viewControllers" id="cIw-by-ASy"/>
                         <segue destination="4hk-ed-erv" kind="relationship" relationship="viewControllers" id="jAt-zZ-FNo"/>
                         <segue destination="RWE-t9-FxG" kind="relationship" relationship="viewControllers" id="aGQ-Gu-On0"/>
                     </connections>
