@@ -27,36 +27,15 @@
 
 - (void)viewDidLoad
 {
-//    self.parseClassName = @"Kitten";
-//    [PFUser logOut];
-   // PFUser* testUser = [PFUser new];
- //   [PFUser logInWithUsernameInBackground:@"wheatley" password:@"thecakeisalie"];
-  //  [testUser setUsername:@"Joel"];
-   // [testUser setPassword:@"ellie"];
-   /// [testUser signUpInBackground];
-//    PFUser* wheatley = [PFUser currentUser];
-//    [wheatley saveInBackground];
-    //catPics = [NSMutableArray new];
-    //users = [NSMutableArray new];
-    //catPicCount = 0;
     [super viewDidLoad];
-    //NSLog(@"%@",[[PFUser currentUser]username]);
     NSError* error = [NSError new];
     [self objectsDidLoad:*&error];
-//    [PFUser enableAutomaticUser];
     
 }
 
 -(PFQuery *)queryForTable{
     PFQuery* query = [PFQuery queryWithClassName:@"Kitten"];
     [query orderByDescending:@"createdAt"];
-    //catPics = (NSMutableArray*)[query findObjects];
-//    for (PFObject* object in catPics) {
-//        PFUser* temp = [object objectForKey:@"user"];
-//        [temp fetch];
-//        [users addObject:temp];
-//    }
-//    [query whereKey:@"user" notEqualTo:[PFUser currentUser]];
     return query;
     
 }
@@ -73,9 +52,6 @@
        cell.myTextField.text = tempUser.username;
     }];
     cell.myImageView.file = [object objectForKey:@"image"];
-//    NSLog(@"%@", tempUser);
-
-//    [cell.imageView addSubview:cell.myView];
     [cell.myImageView loadInBackground];
     if ([object objectForKey:@"Hates"] == NULL) {
         cell.hateNumber.text = @"0";

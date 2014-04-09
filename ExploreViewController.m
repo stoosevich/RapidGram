@@ -10,10 +10,11 @@
 #import "Parse/Parse.h"
 #import "ProfileCollectionCell.h"
 
-@interface ExploreViewController () <UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource>
+@interface ExploreViewController () <UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *myCollectionView;
 @property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *myCollectionFlowLayout;
 @property NSArray* otherProfilesPhotos;
+@property (weak, nonatomic) IBOutlet UISearchBar *mySearchBar;
 
 @end
 
@@ -22,19 +23,26 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    PFQuery* query = [PFQuery queryWithClassName:@"Kitten"];
-    [query whereKey:@"user" notEqualTo:[PFUser currentUser]];
-    [query orderByDescending:@"createdAt"];
-    self.myCollectionFlowLayout.itemSize = CGSizeMake(99, 99);
-    dispatch_queue_t queue = dispatch_get_main_queue();
-    dispatch_async(queue, ^{
-        self.otherProfilesPhotos = [query findObjects];
-        NSLog(@"%d", self.otherProfilesPhotos.count);
-        NSLog(@"%@", [self.otherProfilesPhotos.firstObject class]);
-        [self.myCollectionView reloadData];
-       
-    });
+    [self load:@""];
+
 }
+
+-(void)load:(NSString*)string{
+    if ([string isEqualToString:@""]) {
+        PFQuery* query = [PFQuery queryWithClassName:@"Kitten"];
+        [query whereKey:@"user" notEqualTo:[PFUser currentUser]];
+        [query orderByDescending:@"createdAt"];
+        self.myCollectionFlowLayout.itemSize = CGSizeMake(99, 99);
+        dispatch_queue_t queue = dispatch_get_main_queue();
+        dispatch_async(queue, ^{
+            self.otherProfilesPhotos = [query findObjects];
+            [self.myCollectionView reloadData];
+        
+        });
+    }
+}
+
+
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
