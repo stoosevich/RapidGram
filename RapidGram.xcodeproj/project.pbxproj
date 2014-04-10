@@ -16,6 +16,7 @@
 		814FA66418F34A7B00F06DE7 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814FA66318F34A7B00F06DE7 /* CameraViewController.m */; };
 		814FA6AE18F4650800F06DE7 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814FA6AD18F4650800F06DE7 /* HomeViewController.m */; };
 		814FA6B418F4867500F06DE7 /* MyTableViewCel.m in Sources */ = {isa = PBXBuildFile; fileRef = 814FA6B318F4867500F06DE7 /* MyTableViewCel.m */; };
+		814FA78018F6E54F00F06DE7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814FA77F18F6E54F00F06DE7 /* LoginViewController.m */; };
 		81B1A0FD18F32BB40053F5EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B1A0FC18F32BB40053F5EF /* Foundation.framework */; };
 		81B1A0FF18F32BB40053F5EF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B1A0FE18F32BB40053F5EF /* CoreGraphics.framework */; };
 		81B1A10118F32BB40053F5EF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B1A10018F32BB40053F5EF /* UIKit.framework */; };
@@ -61,6 +62,8 @@
 		814FA6AD18F4650800F06DE7 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		814FA6B218F4867500F06DE7 /* MyTableViewCel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewCel.h; sourceTree = "<group>"; };
 		814FA6B318F4867500F06DE7 /* MyTableViewCel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCel.m; sourceTree = "<group>"; };
+		814FA77E18F6E54F00F06DE7 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		814FA77F18F6E54F00F06DE7 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		81B1A0F918F32BB40053F5EF /* RapidGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RapidGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81B1A0FC18F32BB40053F5EF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		81B1A0FE18F32BB40053F5EF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -125,6 +128,8 @@
 				814FA65618F342A700F06DE7 /* ProfileViewController.m */,
 				561325B518F5DAF5001CB1A3 /* ProfileCollectionCell.h */,
 				561325B618F5DAF5001CB1A3 /* ProfileCollectionCell.m */,
+				814FA77E18F6E54F00F06DE7 /* LoginViewController.h */,
+				814FA77F18F6E54F00F06DE7 /* LoginViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -349,6 +354,7 @@
 				814FA66118F3490400F06DE7 /* ActivityViewController.m in Sources */,
 				561325B718F5DAF5001CB1A3 /* ProfileCollectionCell.m in Sources */,
 				814FA65718F342A700F06DE7 /* ProfileViewController.m in Sources */,
+				814FA78018F6E54F00F06DE7 /* LoginViewController.m in Sources */,
 				814FA6AE18F4650800F06DE7 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

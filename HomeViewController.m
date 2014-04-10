@@ -30,6 +30,10 @@
     [super viewDidLoad];
     NSError* error = [NSError new];
     [self objectsDidLoad:*&error];
+    NSLog(@"%@", [PFUser currentUser]);
+    if ([PFUser currentUser] == nil) {
+        [self performSegueWithIdentifier:@"notLoggedInSegue" sender:self];
+    }
     
 }
 
