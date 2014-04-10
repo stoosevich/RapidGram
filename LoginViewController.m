@@ -7,8 +7,9 @@
 //
 
 #import "LoginViewController.h"
+#import "Parse/Parse.h"
 
-@interface LoginViewController ()
+@interface LoginViewController ()<UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
@@ -18,17 +19,30 @@
 
 @implementation LoginViewController
 
-
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [PFUser logOut];
+    self.passwordTextField.secureTextEntry = YES;
+
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    
+    if ([PFUser currentUser])
+    {
+        [self performSegueWithIdentifier:@"LoggedInSegue" sender:self];
+    }
+    
 }
 
 - (IBAction)didPressLoginButton:(id)sender
 {
-    
+    [PFUser logInWithUsername:self.usernameTextField.text password:self.passwordTextField.text];
+    if ([PFUser currentUser])
+    {
+        [self performSegueWithIdentifier:@"LoggedInSegue" sender:self];
+    }
 }
 
 

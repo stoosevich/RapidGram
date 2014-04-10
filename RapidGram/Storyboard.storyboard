@@ -4,6 +4,24 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="TRn-Ij-zEd">
+            <objects>
+                <viewController id="mTF-7L-pOU" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xky-ft-bk7"/>
+                        <viewControllerLayoutGuide type="bottom" id="v9C-5P-Uqa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3wt-U3-eLM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1IW-bK-LNa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-93" y="-330"/>
+        </scene>
         <!--Home View Controller - Home-->
         <scene sceneID="NEk-j4-aVc">
             <objects>
@@ -149,7 +167,7 @@
                         <outlet property="loginButton" destination="1kZ-zl-aNw" id="Fvd-7c-LhP"/>
                         <outlet property="passwordTextField" destination="IcD-Nx-1nu" id="EQD-Yo-hTU"/>
                         <outlet property="usernameTextField" destination="Tk8-ZK-ty8" id="KHQ-7j-oUs"/>
-                        <segue destination="o4l-pi-r3s" kind="push" id="gET-mW-Zco"/>
+                        <segue destination="o4l-pi-r3s" kind="modal" identifier="LoggedInSegue" modalTransitionStyle="flipHorizontal" id="gET-mW-Zco"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c5o-Dx-420" userLabel="First Responder" sceneMemberID="firstResponder"/>

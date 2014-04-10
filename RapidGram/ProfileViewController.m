@@ -33,7 +33,12 @@
     [query whereKey:@"user" equalTo:[PFUser currentUser]];
     [query orderByDescending:@"createdAt"];
     self.myCollectionFlowLayout.itemSize = CGSizeMake(99, 99);
-    self.profileImageView.image = [UIImage imageNamed:@"profilePic.png"];
+//    self.profileImageView.image = [UIImage imageNamed:@"profilePic.png"];
+    [[[PFUser currentUser] objectForKey:@"profilePhoto"] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        self.profileImageView.image = [UIImage imageWithData:data];
+
+    }];
+
 
 
     dispatch_queue_t queue = dispatch_get_main_queue();

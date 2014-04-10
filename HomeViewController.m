@@ -30,11 +30,13 @@
     [super viewDidLoad];
     NSError* error = [NSError new];
     [self objectsDidLoad:*&error];
+//    UIImage* image = [UIImage imageNamed:@"wheatly_120x120.png"];
+//    NSData* data = UIImagePNGRepresentation(image);
+//    PFFile* profilePic = [PFFile fileWithData:data];
+//    [[PFUser currentUser] setObject:profilePic forKey:@"profilePhoto"];
+//    [[PFUser currentUser] saveInBackground];
 
     NSLog(@"%@", [PFUser currentUser]);
-    if ([PFUser currentUser] == nil) {
-        [self performSegueWithIdentifier:@"notLoggedInSegue" sender:self];
-    }
     
 }
 

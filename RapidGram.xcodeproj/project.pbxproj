@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		561325B718F5DAF5001CB1A3 /* ProfileCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 561325B618F5DAF5001CB1A3 /* ProfileCollectionCell.m */; };
 		561325B918F5FCD4001CB1A3 /* profilePic.png in Resources */ = {isa = PBXBuildFile; fileRef = 561325B818F5FCD4001CB1A3 /* profilePic.png */; };
+		561325BB18F6FBBD001CB1A3 /* wheatly_120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 561325BA18F6FBBD001CB1A3 /* wheatly_120x120.png */; };
 		814FA65118F33BA500F06DE7 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 814FA65018F33BA500F06DE7 /* Storyboard.storyboard */; };
 		814FA65718F342A700F06DE7 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814FA65618F342A700F06DE7 /* ProfileViewController.m */; };
 		814FA65D18F3449100F06DE7 /* ExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814FA65C18F3449100F06DE7 /* ExploreViewController.m */; };
@@ -49,6 +50,7 @@
 		561325B518F5DAF5001CB1A3 /* ProfileCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileCollectionCell.h; sourceTree = "<group>"; };
 		561325B618F5DAF5001CB1A3 /* ProfileCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileCollectionCell.m; sourceTree = "<group>"; };
 		561325B818F5FCD4001CB1A3 /* profilePic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profilePic.png; sourceTree = "<group>"; };
+		561325BA18F6FBBD001CB1A3 /* wheatly_120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wheatly_120x120.png; sourceTree = "<group>"; };
 		814FA65018F33BA500F06DE7 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = RapidGram/Storyboard.storyboard; sourceTree = "<group>"; };
 		814FA65518F342A700F06DE7 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = RapidGram/ProfileViewController.h; sourceTree = "<group>"; };
 		814FA65618F342A700F06DE7 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = RapidGram/ProfileViewController.m; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			children = (
 				814FA6AC18F4650800F06DE7 /* HomeViewController.h */,
 				814FA6AD18F4650800F06DE7 /* HomeViewController.m */,
+				561325BA18F6FBBD001CB1A3 /* wheatly_120x120.png */,
 				814FA65B18F3449100F06DE7 /* ExploreViewController.h */,
 				814FA65C18F3449100F06DE7 /* ExploreViewController.m */,
 				814FA66218F34A7B00F06DE7 /* CameraViewController.h */,
@@ -290,6 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				561325BB18F6FBBD001CB1A3 /* wheatly_120x120.png in Resources */,
 				561325B918F5FCD4001CB1A3 /* profilePic.png in Resources */,
 				81B1A10918F32BB40053F5EF /* InfoPlist.strings in Resources */,
 				81B1A11418F32BB40053F5EF /* Images.xcassets in Resources */,

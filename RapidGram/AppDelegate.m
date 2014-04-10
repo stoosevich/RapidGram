@@ -7,8 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "RootViewController.h"
+#import "LoginViewController.h"
 #import <Parse/Parse.h>
+#import "HomeViewController.h"
 
 @implementation AppDelegate
 
@@ -22,7 +23,7 @@
                   clientKey:@"HH1mWpllMb5e4hLISy8rjtPl2lre3eM6HjDJpw5F"];
     
 //    UITabBarController* tabBarController = (UITabBarController*) self.window.rootViewController;
-//    RootViewController* rootViewController = tabBarController.viewControllers.firstObject;
+ //   RootViewController* rootViewController = tabBarController.viewControllers.firstObject;
 //    rootViewController.managedObjectContext = self.managedObjectContext;
     return YES;
 }
