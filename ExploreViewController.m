@@ -10,7 +10,7 @@
 #import "Parse/Parse.h"
 #import "ProfileCollectionCell.h"
 
-@interface ExploreViewController () <UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate>
+@interface ExploreViewController () <UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate, UITabBarDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *myCollectionView;
 @property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *myCollectionFlowLayout;
 @property NSArray* otherProfilesPhotos;
@@ -40,9 +40,21 @@
         
         });
     }
+    else{
+        PFQuery* query = [PFQuery queryWithClassName:@"Kitten"];
+        PFQuery* usersQuery = [PFUser query];
+        [usersQuery whereKey:@"username" matchesRegex:string modifiers:@"i"];
+        [query whereKey:@"user" matchesKey:@"objectId" inQuery:usersQuery];
+        self.otherProfilesPhotos = [query findObjects];
+        [self.myCollectionView reloadData];
+    }
 }
 
-
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    [self.view endEditing:YES];
+    [self load:self.mySearchBar.text];
+    NSLog(@"hey");
+}
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{

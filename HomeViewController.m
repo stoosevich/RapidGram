@@ -52,12 +52,13 @@
 {
     MyTableViewCel *cell = (MyTableViewCel*)[tableView dequeueReusableCellWithIdentifier:@"myCellReuseID"];
     
-    
-    
+
     PFUser* tempUser = [object objectForKey:@"user"];
     [tempUser fetchIfNeededInBackgroundWithBlock:^(PFObject *object, NSError *error) {
        cell.myTextField.text = tempUser.username;
     }];
+    
+    
     cell.myImageView.file = [object objectForKey:@"image"];
     [cell.myImageView loadInBackground];
     if ([object objectForKey:@"Hates"] == NULL) {
